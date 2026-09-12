@@ -1,0 +1,6 @@
+{
+  "name": "双重差分与动态效应实验室",
+  "description": "集成经典与多期DID代数建模、2D平行趋势与反事实动态演播沙盒、事件研究系数检验、500次安慰剂蒙特卡洛演播、六大经典实证案例库、Python代码引擎及AI计量诊断的专业交互实验室。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
