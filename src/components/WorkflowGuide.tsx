@@ -116,7 +116,7 @@ export const WorkflowGuide: React.FC<WorkflowGuideProps> = ({ onNavigateToModule
           <div>
             <div className="flex items-center space-x-2">
               <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold bg-teal-50 text-teal-800 border border-teal-200">
-                模块 09
+                模块 08
               </span>
               <h2 className="text-xl font-bold text-slate-900 font-serif">
                 双重差分实证全流程全景导引 (5-Step Empirical Workflow)

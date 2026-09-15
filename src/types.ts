@@ -10,10 +10,9 @@ export type LabModule =
   | "placebo"         // 5. 安慰剂检验
   | "cases"           // 6. 六大案例
   | "code"            // 7. 代码引擎
-  | "ai-dialogue"     // 8. AI对话窗口
-  | "workflow"        // 9. 全流程导引
-  | "data-report"     // 10. 数据与报告
-  | "knowledge";      // 知识导引
+  | "workflow"        // 8. 全流程导引
+  | "data-report"     // 9. 数据与报告
+  | "knowledge";      // 10. 知识导引
 
 export type ShockPattern = "constant" | "expanding" | "concave" | "lagged" | "fading";
 

@@ -7,7 +7,6 @@ import {
   Boxes,
   Library,
   Terminal,
-  Bot,
   Compass,
   FileSpreadsheet,
   GraduationCap,
@@ -35,10 +34,9 @@ const MODULES: ModuleItem[] = [
   { id: "placebo", index: 5, label: "安慰剂检验", shortDesc: "500次蒙特卡洛虚构", icon: Boxes },
   { id: "cases", index: 6, label: "六大案例", shortDesc: "经典自然实验一键加载", icon: Library },
   { id: "code", index: 7, label: "代码引擎", shortDesc: "在线运行与独立执行", icon: Terminal },
-  { id: "ai-dialogue", index: 8, label: "AI专家对话", shortDesc: "双模型直调与因果答辩", icon: Bot },
-  { id: "workflow", index: 9, label: "全流程导引", shortDesc: "数据到决策5步全景", icon: Compass },
-  { id: "data-report", index: 10, label: "数据与报告", shortDesc: "数据集下载与PDF导出", icon: FileSpreadsheet },
-  { id: "knowledge", index: 11, label: "知识导引", shortDesc: "三大模型与陷阱图谱", icon: GraduationCap },
+  { id: "workflow", index: 8, label: "全流程导引", shortDesc: "数据到决策5步全景", icon: Compass },
+  { id: "data-report", index: 9, label: "数据与报告", shortDesc: "数据集下载与PDF导出", icon: FileSpreadsheet },
+  { id: "knowledge", index: 10, label: "知识导引", shortDesc: "三大模型与陷阱图谱", icon: GraduationCap },
 ];
 
 export const ModuleSliceBar: React.FC<ModuleSliceBarProps> = ({
@@ -47,7 +45,7 @@ export const ModuleSliceBar: React.FC<ModuleSliceBarProps> = ({
 }) => {
   return (
     <div className="w-full bg-slate-50 border-b border-slate-200 py-2.5 px-4 overflow-x-auto scrollbar-thin">
-      <div className="max-w-7xl mx-auto flex items-center space-x-1.5 min-w-max">
+      <div className="max-w-7xl mx-auto flex items-center justify-center space-x-1.5 min-w-max">
         {MODULES.map((mod) => {
           const isActive = activeModule === mod.id;
           const Icon = mod.icon;
@@ -55,21 +53,12 @@ export const ModuleSliceBar: React.FC<ModuleSliceBarProps> = ({
             <button
               key={mod.id}
               onClick={() => onSelectModule(mod.id)}
-              className={`flex items-center space-x-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer select-none ${
+              className={`flex items-center justify-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer select-none text-center ${
                 isActive
                   ? "bg-teal-700 text-white shadow-xs font-semibold"
                   : "bg-white text-slate-700 hover:bg-slate-100 hover:text-slate-900 border border-slate-200/80"
               }`}
             >
-              <span
-                className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-mono ${
-                  isActive
-                    ? "bg-teal-800 text-teal-100"
-                    : "bg-slate-200 text-slate-600"
-                }`}
-              >
-                {mod.index}
-              </span>
               <Icon className="w-3.5 h-3.5" />
               <span>{mod.label}</span>
             </button>

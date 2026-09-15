@@ -196,7 +196,7 @@ year,group,is_treated,is_post,did,outcome_value,counterfactual_outcome
           <div>
             <div className="flex items-center space-x-2">
               <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold bg-teal-50 text-teal-800 border border-teal-200">
-                模块 10
+                模块 09
               </span>
               <h2 className="text-xl font-bold text-slate-900 font-serif">
                 数据与报告中心 · {activeCase.name}

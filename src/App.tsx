@@ -94,14 +94,6 @@ export default function App() {
 
         {activeModule === "code" && <CodeEngine config={config} />}
 
-        {activeModule === "ai-dialogue" && (
-          <AiAssistantModal
-            config={config}
-            isOpen={true}
-            isEmbedded={true}
-          />
-        )}
-
         {activeModule === "workflow" && (
           <WorkflowGuide onNavigateToModule={(mod) => setActiveModule(mod)} />
         )}
@@ -118,7 +110,7 @@ export default function App() {
       </main>
 
       {/* Floating AI Diagnostic Modal when triggered from Navbar */}
-      {isAiModalOpen && activeModule !== "ai-dialogue" && (
+      {isAiModalOpen && (
         <AiAssistantModal
           config={config}
           isOpen={isAiModalOpen}
